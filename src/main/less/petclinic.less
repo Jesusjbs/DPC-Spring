@@ -1,0 +1,242 @@
+/*
+ * Copyright 2016 the original author or authors.
+ *
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@icon-font-path:    "../../webjars/bootstrap/fonts/";
+
+@dpc-blue:      #2C5CA2;
+@dpc-dark-blue: #193765;
+@dpc-dark-grey:      #34302D;
+@dpc-grey:       #838789;
+@dpc-white: #f1f1f1;
+@dpc-light-blue: #4086EC;
+
+@body-bg:                           @dpc-white;
+@text-color:                        @dpc-dark-grey;
+@link-color:                        @dpc-light-blue;
+@link-hover-color:                  @dpc-blue;
+
+@navbar-default-link-color:         @dpc-white;
+@navbar-default-link-active-color:  @dpc-white;
+@navbar-default-link-hover-color:   @dpc-white;
+@navbar-default-link-hover-bg:      @dpc-blue;
+@navbar-default-toggle-icon-bar-bg: @dpc-white;
+@navbar-default-toggle-hover-bg:    transparent;
+@navbar-default-link-active-bg:     @dpc-blue;
+
+@border-radius-base:             0;
+@border-radius-large:            0;
+@border-radius-small:            0;
+
+@btn-default-color:              @dpc-white;
+@btn-default-bg:                 @dpc-dark-grey;
+@btn-default-border:             @dpc-blue;
+
+@nav-tabs-active-link-hover-color:        @dpc-white;
+@nav-tabs-active-link-hover-bg:           @dpc-dark-grey;
+@nav-tabs-active-link-hover-border-color: @dpc-dark-grey;
+@nav-tabs-border-color:                   @dpc-dark-grey;
+
+@pagination-active-bg:                    @dpc-dark-grey;
+@pagination-active-border:                @dpc-blue;
+@table-border-color:                      @dpc-dark-grey;
+
+.table > thead > tr > th {
+  background-color: lighten(@dpc-dark-grey, 3%);
+  color: @dpc-white;
+}
+
+.table-filter {
+  background-color: @dpc-dark-grey;
+  padding: 9px 12px;
+}
+
+.nav > li > a {
+  color: @dpc-grey;
+}
+
+.btn-default {
+  border-width: 2px;
+  transition: border 0.15s;
+  -webkit-transition: border 0.15s;
+  -moz-transition: border 0.15s;
+  -o-transition: border 0.15s;
+  -ms-transition: border 0.15s;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-color: @dpc-dark-grey;
+    border-color: @dpc-dark-grey;
+  }
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+code {
+  font-size: 80%;
+}
+
+.xd-container {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  margin-bottom: 15px
+}
+
+.index-page--subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 30px;
+}
+
+.form-horizontal button.btn-inverse {
+  margin-left: 32px;
+}
+
+#job-params-modal .modal-dialog {
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+[ng-cloak].splash {
+  display: block !important;
+}
+[ng-cloak] {
+  display: none;
+}
+
+.splash {
+  background: @dpc-blue;
+  color: @dpc-dark-grey;
+  display: none;
+}
+
+.error-page {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.error-page .error-title {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 30px 0 0;
+}
+
+table td {
+  vertical-align: middle;
+}
+
+table td .progress {
+  margin-bottom: 0;
+}
+
+table td.action-column {
+  width: 1px;
+}
+
+.help-block {
+  color: lighten(@text-color, 50%); // lighten the text some for contrast
+}
+
+.xd-containers {
+  font-size: 15px;
+}
+
+.cluster-view > table td {
+  vertical-align: top;
+}
+
+.cluster-view .label, .cluster-view .column-block {
+  display: block;
+}
+
+.cluster-view .input-group-addon {
+  width: 0%;
+}
+
+.cluster-view {
+  margin-bottom: 0;
+}
+
+.deployment-status-deployed {
+  .label-success;
+}
+
+.deployment-status-incomplete {
+  .label-warning;
+}
+
+.deployment-status-failed {
+  .label-danger;
+}
+
+.deployment-status-deploying {
+  .label-info
+}
+.deployment-status-na {
+}
+
+.container-details-table th {
+  background-color: lighten(@dpc-dark-grey, 3%);
+  color: @dpc-white;
+}
+
+.status-help-content-table td {
+  color: @dpc-dark-grey;
+}
+
+.alert-success {
+  .alert-variant(fade(@alert-success-bg, 70%); @alert-success-border; @alert-success-text);
+}
+.alert-info {
+  .alert-variant(fade(@alert-info-bg, 70%); @alert-info-border; @alert-info-text);
+}
+.alert-warning {
+  .alert-variant(fade(@alert-warning-bg, 70%); @alert-warning-border; @alert-warning-text);
+}
+.alert-danger {
+  .alert-variant(fade(@alert-danger-bg, 70%); @alert-danger-border; @alert-danger-text);
+}
+
+.myspinner {
+  animation-name: spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  -webkit-transform-origin: 49% 50%;
+  -webkit-animation-name: spinner;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+hr {
+  border-top: 1px dotted @dpc-dark-grey;
+}
+
+@import "typography.less";
+@import "header.less";
+@import "responsive.less";
+@import "valoracion.less";
+@import "chat.less";
+@import "inicioSesion.less";
